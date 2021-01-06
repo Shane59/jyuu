@@ -4,6 +4,8 @@ import Header from './Components/Header/Header';
 import Content from './Components/Content/Content';
 
 import Image1 from  "./assets/images/wedding-produce-top.jpg";
+import Profile from './Components/Profile/Profile';
+import Contact from './Components/Contact/Contact';
 
 function App() {
   return (
@@ -23,6 +25,8 @@ function App() {
         image={Image1}
         position="right"
       />
+      <Profile />
+      <Contact />
     </div>
   );
 }
