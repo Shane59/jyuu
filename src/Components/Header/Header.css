@@ -1,0 +1,8 @@
+.header-links-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.header-link {
+  margin: 0 10px 0 10px;
+}
