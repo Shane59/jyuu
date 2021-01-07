@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import DummyImg from  "../../assets/images/wedding-produce-top.jpg";
+import DummyImg from  "../../../assets/images/wedding-produce-top.jpg";
 
 const ProfileWrapper = styled.div`
   display: flex;
