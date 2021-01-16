@@ -27,7 +27,11 @@ export default function Profile(props) {
           <ProfileImg src={DummyImg} alt=""/>
         </ImgWrapper>
         <ProfileDescriptionWrapper>
-          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quisquam eos beatae magni reprehenderit molestias, velit sequi quae natus enim! Impedit amet inventore fugiat odio cum. Quod quae esse voluptatibus molestias?</p>
+          <h4>Minami Takenaka<br/>竹中南風</h4>
+          <h4>兵庫県出身</h4>
+          <p>大学卒業後、新卒でイベント会社へ就職。ウエディング事業部にて現場と企画の経験を積み2020年、フリーランスウエディングプランナーとして独立。
+            会場選びから当日でディレクションまでの全てを監修。ウエディングに必要な要素を一から具現化し、”結婚式に「目指すべきスタイル」は存在しない”をコンセプトに自由でユニークな結婚式を創ります。
+          </p>
         </ProfileDescriptionWrapper>
       </ProfileWrapper>
     </>
