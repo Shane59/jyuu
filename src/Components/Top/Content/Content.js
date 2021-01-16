@@ -6,17 +6,32 @@ const ContentsWrapper = styled.div`
   margin: 80px auto 0;
   width: 710px;
   height: 260px;
+  margin-bottom: 136px;
 `;
 const Image = styled.img`
   height: 250px;
   width: auto;
+  filter: grayscale(1);
+  :hover {
+    transform: scale(1.1);
+    transition: transform .4s;
+    filter: none;
+  }
 `;
 const TitleAndDesc = styled.div`
   position: absolute;
+  background-color: black;
+  color: white;
   width: 400px;
   text-align: left;
   z-index: 1;
-  margin-left: ${props => props.position === "right" ? "360px" : null};
+  padding: 24px;
+  margin-top: 46px;
+  box-shadow: 0px 0px 12px 5px #3b4449;
+  margin-left: ${props => props.position === "right" ? "290px" : null};
+`;
+const Title = styled.h2`
+  margin-top: 0;
 `;
 const ImgWrapper = styled.div`
   position: absolute;
@@ -40,7 +55,7 @@ export default function Content(props) {
       <TitleAndDesc
         position={props.position}
       >
-        <h2>{props.num}. {props.title}</h2>
+        <Title>{props.num}. {props.title}</Title>
         <div>{props.description}</div>
       </TitleAndDesc>
       <ImgWrapper
