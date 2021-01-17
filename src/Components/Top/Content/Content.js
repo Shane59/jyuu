@@ -3,10 +3,9 @@ import styled from 'styled-components';
 
 const ContentsWrapper = styled.div`
   position: relative;
-  margin: 80px auto 0;
+  margin: 144px auto 136px;
   width: 710px;
   height: 260px;
-  margin-bottom: 136px;
 `;
 const Image = styled.img`
   height: 250px;
@@ -26,7 +25,7 @@ const TitleAndDesc = styled.div`
   text-align: left;
   z-index: 1;
   padding: 24px;
-  margin-top: 46px;
+  margin-top: -40px;
   box-shadow: 0px 0px 12px 5px #3b4449;
   margin-left: ${props => props.position === "right" ? "290px" : null};
 `;
