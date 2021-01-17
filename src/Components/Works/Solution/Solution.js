@@ -8,6 +8,7 @@ const SolutionWrapper = styled.div`
   background-image: url(${props => props.image});
   background-size: 420px auto;
   background-repeat: no-repeat;
+  background-position: ${props => props.position};
 `;
 const DescriptionWrapper = styled.div`
   flex: 0 1 400px;
@@ -27,13 +28,14 @@ const SolutionNumber = styled.h2`
 
 
 //props
-
+//left or right
 export default function Solution(props) {
   return (
     <>
-      <h1>{props.title}</h1>
       <SolutionWrapper
-        image={props.image}>
+        image={props.image}
+        position={props.position}
+      >
         <DescriptionWrapper>
           <SolutionNumber>{props.num}.</SolutionNumber>{props.description}
         </DescriptionWrapper>

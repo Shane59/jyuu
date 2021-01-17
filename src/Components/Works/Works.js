@@ -5,11 +5,24 @@ import Solution from './Solution/Solution';
 import DummyImg from  "../../assets/images/wedding-produce-top.jpg";
 import Image2 from "../../assets/images/wedding-photo.jpg";
 import Footer from '../Footer/Footer';
+import Header from '../Top/Header/Header';
 
 
 const ContentsWrapper = styled.div`
   max-width: 1050px;
   margin: 0 auto;
+`;
+
+const Message = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 900px;
+  height: 600px;
+  margin: 0 auto;
+  background-color: black;
+  color: white;
+  font-size: 72px;
 `;
 
 //put a component in Fee
@@ -39,20 +52,20 @@ function WeddingPhotoFee() {
 export default function Works() {
   return (
     <div>
-      <h1>Works</h1>
+      <Header />
+      <Message>Works</Message>
       <ContentsWrapper>
-        <div>
-          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Numquam explicabo, nam labore ullam sapiente provident dignissimos quisquam tempora quibusdam. Eos iusto nesciunt reiciendis, ipsa numquam aut distinctio doloremque eveniet velit.</p>
-        </div>
         <Solution
           title="Wedding Produce"
           num="01"
+          position="left"
           image={DummyImg}
           description="どんな結婚式にしたいか、新郎新婦二人の気持ち、ご家族の気持ちを丁寧にヒアリングしながら会場の選定から当日のディレクションまで行います。"
           fee={<Fee />} />
         <Solution
           title="Wedding Produce"
           num="02"
+          position="right"
           image={Image2}
           description="結婚式の前撮りや後撮りに。全国対応可能。ロケーションフォトを中心にプロデュースしています"
           fee={<WeddingPhotoFee />} />

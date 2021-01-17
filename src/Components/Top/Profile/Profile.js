@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import DummyImg from  "../../../assets/images/wedding-produce-top.jpg";
+import ProfileImgURL from  "../../../assets/images/profile.jpg";
 
 const ProfileWrapper = styled.div`
   display: flex;
@@ -34,7 +34,7 @@ export default function Profile(props) {
       <h1>Profile</h1>
       <ProfileWrapper>
         <ImgWrapper>
-          <ProfileImg src={DummyImg} alt=""/>
+          <ProfileImg src={ProfileImgURL} alt=""/>
         </ImgWrapper>
         <ProfileDescriptionWrapper>
           <Name>Minami Takenaka<br/>竹中南風</Name>
