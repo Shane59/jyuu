@@ -21,12 +21,6 @@ const TopImgWrapper = styled.div`
 const TopImg = styled.img`
   width: 900px;
 `;
-const Message = styled.div`
-  position: absolute;
-  top: 430px;
-  right: -110px;
-  font-size: 72px;
-`;
 
 export default function Top() {
   return (
@@ -34,7 +28,6 @@ export default function Top() {
       <Header />
       <TopImgWrapper>
         <TopImg src={TopImgUrl} alt="top image"/>
-        <Message>Welcome.</Message>
       </TopImgWrapper>
       <Content
         num="01"

@@ -25,7 +25,7 @@ const TitleAndDesc = styled.div`
   text-align: left;
   z-index: 1;
   padding: 24px;
-  margin-top: -40px;
+  margin-top: ${props => props.position === "right" ? "170px" : "-40px"};
   box-shadow: 0px 0px 12px 5px #3b4449;
   margin-left: ${props => props.position === "right" ? "290px" : null};
 `;
