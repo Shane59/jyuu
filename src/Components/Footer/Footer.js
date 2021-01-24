@@ -25,10 +25,10 @@ export default function Footer() {
   return (
     <FooterWrapper>
       <MenuWrapper>
-        <div><Link href="">Works</Link></div>
-        <div><Link href="">Wedding</Link></div>
-        <div><Link href="">Profile</Link></div>
-        <div><Link href="">Contact</Link></div>
+        <div><Link href="/works">Works</Link></div>
+        <div><Link href="/wedding">Wedding</Link></div>
+        <div><Link href="/profile">Profile</Link></div>
+        <div><Link href="/contact">Contact</Link></div>
       </MenuWrapper>
       <LinkIconsWrapper>
         <div><Link href="">icon</Link></div>
