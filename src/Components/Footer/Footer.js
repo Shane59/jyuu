@@ -4,10 +4,10 @@ import styled from 'styled-components';
 const FooterWrapper = styled.div`
   display: flex;
   justify-content: center;
-  width: 1050px;
-  margin: 0 auto;
+  margin: 72px auto 0;
   padding: 30px;
   line-height: 24px;
+  background-color: black;
 `;
 const MenuWrapper = styled.div`
   flex: 0 1 200px;
@@ -16,19 +16,23 @@ const MenuWrapper = styled.div`
 const LinkIconsWrapper = styled.div`
   flex: 0 1 200px;
 `;
+const Link = styled.a`
+  color: white;
+  text-decoration: none;
+`;
 
 export default function Footer() {
   return (
     <FooterWrapper>
       <MenuWrapper>
-        <div><a href="">Works</a></div>
-        <div><a href="">Wedding</a></div>
-        <div><a href="">Profile</a></div>
-        <div><a href="">Contact</a></div>
+        <div><Link href="/works">Works</Link></div>
+        <div><Link href="/wedding">Wedding</Link></div>
+        <div><Link href="/profile">Profile</Link></div>
+        <div><Link href="/contact">Contact</Link></div>
       </MenuWrapper>
       <LinkIconsWrapper>
-        <div><a href="">icon</a></div>
-        <div><a href="">icon</a></div>
+        <div><Link href="">icon</Link></div>
+        <div><Link href="">icon</Link></div>
       </LinkIconsWrapper>
     </FooterWrapper>
   )

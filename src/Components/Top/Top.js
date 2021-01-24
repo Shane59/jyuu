@@ -1,4 +1,5 @@
 import React from 'react';
+import styled from 'styled-components';
 
 import Header from './Header/Header';
 import Content from './Content/Content';
@@ -9,10 +10,25 @@ import Profile from './Profile/Profile';
 import Contact from '../Contact/Contact';
 import Footer from '../Footer/Footer';
 
+import TopImgUrl from '../../assets/images/Top-image.jpg';
+
+
+const TopImgWrapper = styled.div`
+  position: relative;
+  width: 900px;
+  margin: 0 auto;
+`;
+const TopImg = styled.img`
+  width: 900px;
+`;
+
 export default function Top() {
   return (
     <div>
       <Header />
+      <TopImgWrapper>
+        <TopImg src={TopImgUrl} alt="top image"/>
+      </TopImgWrapper>
       <Content
         num="01"
         title="wedding produce"

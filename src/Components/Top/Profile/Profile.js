@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import DummyImg from  "../../../assets/images/wedding-produce-top.jpg";
+import ProfileImgURL from  "../../../assets/images/profile.jpg";
 
 const ProfileWrapper = styled.div`
   display: flex;
@@ -34,10 +34,10 @@ export default function Profile(props) {
       <h1>Profile</h1>
       <ProfileWrapper>
         <ImgWrapper>
-          <ProfileImg src={DummyImg} alt=""/>
+          <ProfileImg src={ProfileImgURL} alt=""/>
         </ImgWrapper>
         <ProfileDescriptionWrapper>
-          <Name>Minami Takenaka<br/>竹中南風</Name>
+          <Name>Minami Takenaka</Name>
           <h4>兵庫県出身</h4>
           <p>大学卒業後、新卒でイベント会社へ就職。ウエディング事業部にて現場と企画の経験を積み2020年、フリーランスウエディングプランナーとして独立。<br/>
             <br/>会場選びから当日でディレクションまでの全てを監修。ウエディングに必要な要素を一から具現化し、”結婚式に「目指すべきスタイル」は存在しない”をコンセプトに自由でユニークな結婚式を創ります。

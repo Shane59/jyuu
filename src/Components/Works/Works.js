@@ -2,9 +2,10 @@ import React from 'react';
 import styled from 'styled-components';
 import Solution from './Solution/Solution';
 
-import DummyImg from  "../../assets/images/wedding-produce-top.jpg";
-import Image2 from "../../assets/images/wedding-photo.jpg";
+import DummyImg from  "../../assets/images/worksDummyImg.png";
 import Footer from '../Footer/Footer';
+import Header from '../Top/Header/Header';
+import ContactButton from '../ContactButton/ContactButton';
 
 
 const ContentsWrapper = styled.div`
@@ -12,12 +13,24 @@ const ContentsWrapper = styled.div`
   margin: 0 auto;
 `;
 
+const Message = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 900px;
+  height: 600px;
+  margin: 0 auto;
+  background-color: black;
+  color: white;
+  font-size: 72px;
+`;
+
 //put a component in Fee
 
 function Fee() {
   return (
     <div>
-      <li>プロデュースfee: ¥250,000 yen (税抜)</li>
+      <div>プロデュースfee: ¥250,000 yen (税抜)</div>
       <p>上記金額は、ディレクションfeeのみの金額です。<br />総額に関してはヒアリング後ご提示させていただきます。</p>
     </div>
   )
@@ -27,7 +40,7 @@ function WeddingPhotoFee() {
   return (
     <div>
       <div>【ロケーションフォト撮影(国内)】</div>
-      <li>・基本プラン：¥190,000 yen〜(税抜)</li>
+      <div>基本プラン：¥190,000 yen〜(税抜)</div>
       <div>[セット内容]</div>
       <p>撮影場所/ドレス/タキシード/アクセサリー/小物一式<br/>ヘアメイク/写真全データ/ブーケブートニア<br/>
         ※関東以外に関しては交通費が発生いたします。
@@ -39,24 +52,25 @@ function WeddingPhotoFee() {
 export default function Works() {
   return (
     <div>
-      <h1>Works</h1>
+      <Header />
+      <Message>Works</Message>
       <ContentsWrapper>
-        <div>
-          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Numquam explicabo, nam labore ullam sapiente provident dignissimos quisquam tempora quibusdam. Eos iusto nesciunt reiciendis, ipsa numquam aut distinctio doloremque eveniet velit.</p>
-        </div>
         <Solution
           title="Wedding Produce"
           num="01"
+          position="left"
           image={DummyImg}
           description="どんな結婚式にしたいか、新郎新婦二人の気持ち、ご家族の気持ちを丁寧にヒアリングしながら会場の選定から当日のディレクションまで行います。"
           fee={<Fee />} />
         <Solution
           title="Wedding Produce"
           num="02"
-          image={Image2}
+          position="right"
+          image={DummyImg}
           description="結婚式の前撮りや後撮りに。全国対応可能。ロケーションフォトを中心にプロデュースしています"
           fee={<WeddingPhotoFee />} />
       </ContentsWrapper>
+      <ContactButton />
       <Footer />
     </div>
   )
