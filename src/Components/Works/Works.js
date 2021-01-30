@@ -2,7 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 import Solution from './Solution/Solution';
 
-import DummyImg from  "../../assets/images/worksDummyImg.png";
+import WeddingProduceImg from  "../../assets/images/wedding-produce.jpg";
+import WeddingPhotoImg from  "../../assets/images/wedding-photo-works.jpg";
 import Footer from '../Footer/Footer';
 import Header from '../Top/Header/Header';
 import ContactButton from '../ContactButton/ContactButton';
@@ -59,14 +60,14 @@ export default function Works() {
           title="Wedding Produce"
           num="01"
           position="left"
-          image={DummyImg}
+          image={WeddingProduceImg}
           description="どんな結婚式にしたいか、新郎新婦二人の気持ち、ご家族の気持ちを丁寧にヒアリングしながら会場の選定から当日のディレクションまで行います。"
           fee={<Fee />} />
         <Solution
           title="Wedding Produce"
           num="02"
           position="right"
-          image={DummyImg}
+          image={WeddingPhotoImg}
           description="結婚式の前撮りや後撮りに。全国対応可能。ロケーションフォトを中心にプロデュースしています"
           fee={<WeddingPhotoFee />} />
       </ContentsWrapper>

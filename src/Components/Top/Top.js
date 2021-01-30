@@ -15,11 +15,12 @@ import TopImgUrl from '../../assets/images/Top-image.jpg';
 
 const TopImgWrapper = styled.div`
   position: relative;
-  width: 900px;
+  max-width: 100%;
   margin: 0 auto;
+  overflow: hidden;
 `;
 const TopImg = styled.img`
-  width: 900px;
+  max-width: 900px;
 `;
 
 export default function Top() {

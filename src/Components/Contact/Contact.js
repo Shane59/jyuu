@@ -6,7 +6,7 @@ export default function Contact(props) {
     <div>
       <h1>Contact</h1>
       <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfKZH4FKgWFznDUQtjF4mQyCQN4vDjayYbYng8tQe3WyvvW9w/viewform?embedded=true"
-        width="900"
+        max-width="900"
         height="800"
         frameborder="0"
         marginheight="0"
