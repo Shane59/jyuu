@@ -4,8 +4,13 @@ import styled from 'styled-components';
 const ContentsWrapper = styled.div`
   position: relative;
   margin: 144px auto 136px;
-  width: 710px;
+  max-width: 710px;
   height: 260px;
+  @media only screen and (max-width: 776px) {
+    position: unset;
+    height: 350px;
+    margin: 64px auto 136px;
+  }
 `;
 const Image = styled.img`
   height: 250px;
@@ -21,22 +26,30 @@ const TitleAndDesc = styled.div`
   position: absolute;
   background-color: black;
   color: white;
-  width: 400px;
+  max-width: 400px;
   text-align: left;
   z-index: 1;
   padding: 24px;
   margin-top: ${props => props.position === "right" ? "170px" : "-40px"};
   box-shadow: 0px 0px 12px 5px #3b4449;
   margin-left: ${props => props.position === "right" ? "290px" : null};
+  @media only screen and (max-width: 776px) {
+    position: unset;
+    margin: 0 auto;
+  }
 `;
 const Title = styled.h2`
   margin-top: 0;
 `;
 const ImgWrapper = styled.div`
   position: absolute;
-  max-width: 200px;
+  max-width: 100%;
   margin-left: ${props => props.position === "left" ? "360px" : null};
   z-index: 0;
+  @media only screen and (max-width: 776px) {
+    position: unset;
+    margin: 24px auto;
+  }
 `;
 
 // props = {

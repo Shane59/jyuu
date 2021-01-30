@@ -11,13 +11,23 @@ const ProfileWrapper = styled.div`
   background-color: #1E2A2D;
   color: white;
   align-items: center;
+  @media only screen and (max-width: 776px) {
+    flex-direction: column;
+  }
 `;
 const ImgWrapper = styled.div`
   flex: 0 1 410px;
+  @media only screen and (max-width: 776px) {
+    flex: 0 1 150px;
+    margin-top: 36px;
+  }
 `;
 const ProfileDescriptionWrapper = styled.div`
   text-align: left;
   flex: 0 1 410px;
+  @media only screen and (max-width: 776px) {
+    padding: 16px;
+  }
 `;
 const Name = styled.h3`
   font-size: 32px;
