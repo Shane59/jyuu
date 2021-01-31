@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 
-import Logo from '../../../assets/Logo-black.png';
 import Hamberger from '../../../SVGs/Hamberger';
 import Close from '../../../SVGs/Close';
 
@@ -15,6 +14,7 @@ const HeaderLinksWrapper = styled.div`
   display: flex;
   justify-content: center;
   padding: 24px;
+  height: 100%; //check this later
   @media only screen and (max-width: 430px) {
     .smartphone-menu-wrapper {
       position: fixed;
@@ -52,10 +52,6 @@ const Link = styled.a`
   text-decoration: none;
   color: black;
 `;
-const LogoImg = styled.img`
-  width: 35px;
-  margin: 0 25px 0 25px;
-`;
 const HambergerMenuWrapper = styled.div`
   display: none;
   @media only screen and (max-width: 430px) {
@@ -85,7 +81,11 @@ export default function Header() {
         </div>
         <div className="mobile-menu-items-wrapper">
           <UnorderedList>
-            <li><Link className="mobile-menu-link" href="/">HOME</Link></li>
+            <li><Link className="mobile-menu-link" href="/">Home</Link></li>
+            <li><Link className="mobile-menu-link" href="/works">Works</Link></li>
+            <li><Link className="mobile-menu-link" href="/profile">Profile</Link></li>
+            <li><Link className="mobile-menu-link" href="/fee">Fee</Link></li>
+            <li><Link className="mobile-menu-link" href="/contact">Contact</Link></li>
             <li onClick={() => setSmartphoneMenuOpen(!smartphoneMenuOpen)}><Link className="mobile-menu-link" href="#online-store">ONLINE STORE</Link></li>
             <li onClick={() => setSmartphoneMenuOpen(!smartphoneMenuOpen)}><Link className="mobile-menu-link" href="#about">ABOUT</Link></li>
           </UnorderedList>
@@ -98,7 +98,6 @@ export default function Header() {
       <HeaderLinksWrapper>
         <HeaderLink><Link href="/works">Works</Link></HeaderLink>
         <HeaderLink><Link href="/profile">Profile</Link></HeaderLink>
-        <LogoImg src={Logo} alt="logo" />
         <HeaderLink><Link href="/fee">Fee</Link></HeaderLink>
         <HeaderLink><Link href="/contact">Contact</Link></HeaderLink>
         <HambergerMenuWrapper onClick={() => setSmartphoneMenuOpen(!smartphoneMenuOpen)}>

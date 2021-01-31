@@ -18,12 +18,15 @@ const Message = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 900px;
+  max-width: 900px;
   height: 600px;
   margin: 0 auto;
   background-color: black;
   color: white;
   font-size: 72px;
+  @media only screen and (max-width: 440px) {
+    font-size: 42px;
+  }
 `;
 
 //put a component in Fee
@@ -54,7 +57,7 @@ export default function Works() {
   return (
     <div>
       <Header />
-      <Message>Works</Message>
+      <Message>Works.</Message>
       <ContentsWrapper>
         <Solution
           title="Wedding Produce"
