@@ -10,7 +10,7 @@ const Link = styled.a`
   font-weight: bold;
   font-size: 22px;
   margin: 0 auto;
-  width: 400px;
+  max-width: 320px;
   height: 60px;
   background-color: black;
 `;
