@@ -13,7 +13,7 @@ const HeaderLink = styled.div`
 const HeaderLinksWrapper = styled.div`
   display: flex;
   justify-content: center;
-  padding: 24px;
+  padding: 10px;
   height: 100%; //check this later
   @media only screen and (max-width: 430px) {
     .smartphone-menu-wrapper {
@@ -28,7 +28,7 @@ const HeaderLinksWrapper = styled.div`
     .smartphone-menu-bar {
       display: flex;
       align-items: baseline;
-      margin: 10px 0px 0px;
+      margin: 10px 10px 0px;
     }
     .close-button {
       margin-left: auto;
@@ -81,7 +81,7 @@ export default function Header() {
         </div>
         <div className="mobile-menu-items-wrapper">
           <UnorderedList>
-            <li><Link className="mobile-menu-link" href="/">Home</Link></li>
+            <li><Link className="mobile-menu-link" href="/">Top</Link></li>
             <li><Link className="mobile-menu-link" href="/works">Works</Link></li>
             <li><Link className="mobile-menu-link" href="/profile">Profile</Link></li>
             <li><Link className="mobile-menu-link" href="/fee">Fee</Link></li>
@@ -96,6 +96,7 @@ export default function Header() {
   return (
     <>
       <HeaderLinksWrapper>
+        <HeaderLink><Link href="/">Top</Link></HeaderLink>
         <HeaderLink><Link href="/works">Works</Link></HeaderLink>
         <HeaderLink><Link href="/profile">Profile</Link></HeaderLink>
         <HeaderLink><Link href="/fee">Fee</Link></HeaderLink>

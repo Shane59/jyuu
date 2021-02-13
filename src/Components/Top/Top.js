@@ -16,11 +16,11 @@ import TopImgUrl from '../../assets/images/Top-image.jpg';
 
 const TopImgWrapper = styled.div`
   display: flex;
-  max-width: 100%;
+  max-width: 950px;
+  height: 550px;
   margin: 0 auto;
   overflow: hidden;
   background-image: url(${TopImgUrl});
-  height: 560px;
   background-size: cover;
   justify-content: center;
   align-items: center;
@@ -32,36 +32,31 @@ const LogoImg = styled.img`
 const MessageWrapper = styled.div`
   text-align: left;
   max-width: 720px;
-  margin: 0 auto;
+  margin: 0 auto 70px;
   padding: 0 36px;
 `;
 const MessageParagraph = styled.div`
   margin: 16px 0;
 `;
 const MessageContent = styled.div`
-  margin-top: 110px;
-  h2 {
-    overflow: hidden;
-    text-align: center;
+  max-width: 950px;
+  margin: 40px auto 0;
+  text-align: center;
+  .title-border-right {
+    display: flex;
+    align-items: center;
+    margin-right: 50%;
+    @media only screen and (max-width: 440px) {
+      margin-right: 40%;
+    }
   }
-  h2:before,
-  h2:after {
-    background-color: #000;
+  .title-border-right:before {
+    border-top: 1px solid;
     content: "";
-    display: inline-block;
-    height: 1px;
-    position: relative;
-    vertical-align: middle;
-    width: 30%;
+    flex-grow: 1;
   }
-  h2:before {
-  right: 0.5em;
-  margin-left: -50%;
-  }
-
-  h2:after {
-    left: 0.5em;
-    margin-right: -50%;
+  .title-border-right:before {
+    margin-right: 1rem;
   }
 `;
 
@@ -75,7 +70,7 @@ export default function Top() {
         </div>
       </TopImgWrapper>
       <MessageContent>
-        <h2>Message</h2>
+        <h2 className="title-border-right">Message</h2>
         <MessageWrapper>
           <MessageParagraph>
             時代は変わった。

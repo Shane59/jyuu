@@ -3,6 +3,9 @@ import styled from 'styled-components';
 
 import ProfileImgURL from  "../../../assets/images/profile.jpg";
 
+const TitleWrapper = styled.h1`
+  margin-top: 200px;
+`;
 const ProfileWrapper = styled.div`
   display: flex;
   padding-bottom: 24px;
@@ -41,7 +44,7 @@ const ProfileImg = styled.img`
 export default function Profile(props) {
   return (
     <>
-      <h1>Profile</h1>
+      <TitleWrapper>Profile</TitleWrapper>
       <ProfileWrapper>
         <ImgWrapper>
           <ProfileImg src={ProfileImgURL} alt=""/>

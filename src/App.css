@@ -37,8 +37,13 @@
   }
 }
 h1 {
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-family: 'AWConqueror Std Didot';
 }
 h2 {
-  font-family: cursive; 
+  font-family: 'AWConqueror Std Didot';
+}
+@media only screen and (max-width: 440px) {
+  div {
+    font-size: 14px;
+  }
 }

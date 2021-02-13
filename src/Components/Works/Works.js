@@ -12,20 +12,27 @@ import ContactButton from '../ContactButton/ContactButton';
 const ContentsWrapper = styled.div`
   max-width: 1050px;
   margin: 0 auto;
+  font-family: 'ヒラギノ明朝 ProN';
 `;
 
 const Message = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  max-width: 900px;
-  height: 600px;
+  max-width: 950px;
+  height: 550px;
   margin: 0 auto;
   background-color: black;
   color: white;
   font-size: 72px;
+  font-family: 'AWConqueror Std Didot';
   @media only screen and (max-width: 440px) {
     font-size: 42px;
+  }
+`;
+const PriceDetails = styled.p`
+  @media only screen and (max-width: 440px) {
+    font-size: 12px;
   }
 `;
 
@@ -35,7 +42,7 @@ function Fee() {
   return (
     <div>
       <div>プロデュースfee: ¥250,000 yen (税抜)</div>
-      <p>上記金額は、ディレクションfeeのみの金額です。<br />総額に関してはヒアリング後ご提示させていただきます。</p>
+      <PriceDetails>上記金額は、ディレクションfeeのみの金額です。<br />総額に関してはヒアリング後ご提示させていただきます。</PriceDetails>
     </div>
   )
 }
@@ -45,10 +52,9 @@ function WeddingPhotoFee() {
     <div>
       <div>【ロケーションフォト撮影(国内)】</div>
       <div>基本プラン：¥190,000 yen〜(税抜)</div>
-      <div>[セット内容]</div>
-      <p>撮影場所/ドレス/タキシード/アクセサリー/小物一式<br/>ヘアメイク/写真全データ/ブーケブートニア<br/>
+      <PriceDetails>[セット内容]撮影場所/ドレス/タキシード/アクセサリー/小物一式<br/>ヘアメイク/写真全データ/ブーケブートニア<br/>
         ※関東以外に関しては交通費が発生いたします。
-      </p>
+      </PriceDetails>
     </div>
   )
 }

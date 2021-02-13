@@ -6,10 +6,11 @@ const ContentsWrapper = styled.div`
   margin: 144px auto 136px;
   max-width: 710px;
   height: 260px;
+  font-family: 'ヒラギノ明朝 ProN';
   @media only screen and (max-width: 776px) {
     position: unset;
     height: 350px;
-    margin: 64px auto 136px;
+    margin: 64px auto 205px;
   }
 `;
 const Image = styled.img`
@@ -29,8 +30,8 @@ const TitleAndDesc = styled.div`
   max-width: 400px;
   text-align: left;
   z-index: 1;
-  padding: 24px;
-  margin-top: ${props => props.position === "right" ? "170px" : "-40px"};
+  padding: 40px;
+  margin-top: ${props => props.position === "right" ? "170px" : "-80px"};
   box-shadow: 0px 0px 12px 5px #3b4449;
   margin-left: ${props => props.position === "right" ? "290px" : null};
   @media only screen and (max-width: 776px) {
@@ -40,6 +41,8 @@ const TitleAndDesc = styled.div`
 `;
 const Title = styled.h2`
   margin-top: 0;
+  text-align: center;
+  font-family: 'AWConqueror Std Didot';
 `;
 const ImgWrapper = styled.div`
   position: absolute;
