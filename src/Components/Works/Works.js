@@ -1,9 +1,11 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import styled from 'styled-components';
 import Solution from './Solution/Solution';
 
 import WeddingProduceImg from  "../../assets/images/wedding-produce.jpg";
+import WeddingProduceImgSP from  "../../assets/images/wedding-produce-sp.jpg";
 import WeddingPhotoImg from  "../../assets/images/wedding-photo-works.jpg";
+import WeddingPhotoImgSP from  "../../assets/images/wedding-photo-works-sp.jpg";
 import Footer from '../Footer/Footer';
 import Header from '../Top/Header/Header';
 import ContactButton from '../ContactButton/ContactButton';
@@ -22,7 +24,7 @@ const Message = styled.div`
   max-width: 950px;
   height: 550px;
   margin: 0 auto;
-  background-color: black;
+  background-color: #191817;
   color: white;
   font-size: 72px;
   font-family: 'AWConqueror Std Didot';
@@ -36,13 +38,17 @@ const PriceDetails = styled.p`
   }
 `;
 
+const InstagramSectionWrapper = styled.div`
+  margin: 110px 0 110px 0;
+`;
+
 //put a component in Fee
 
 function Fee() {
   return (
     <div>
-      <div>プロデュースfee: ¥250,000 yen (税抜)</div>
-      <PriceDetails>上記金額は、ディレクションfeeのみの金額です。<br />総額に関してはヒアリング後ご提示させていただきます。</PriceDetails>
+      <div>プロデュースfee: ¥250,000 yen (税別)</div>
+      <PriceDetails>※ディレクションのみの金額です。<br />総額はヒアリング後、大体のお見積もりをご提示いたします。</PriceDetails>
     </div>
   )
 }
@@ -50,16 +56,34 @@ function Fee() {
 function WeddingPhotoFee() {
   return (
     <div>
-      <div>【ロケーションフォト撮影(国内)】</div>
+      <div>
+        <li>【ロケーションフォト撮影(国内)】</li>
+        <li>スタジオフォト：¥230,000yen〜(税別)</li>
+      </div>
       <div>基本プラン：¥190,000 yen〜(税抜)</div>
-      <PriceDetails>[セット内容]撮影場所/ドレス/タキシード/アクセサリー/小物一式<br/>ヘアメイク/写真全データ/ブーケブートニア<br/>
-        ※関東以外に関しては交通費が発生いたします。
+      <PriceDetails>[セット内容]<br />
+        撮影場所/ヘアメイク/写真データ：100〜200カット/ブーケブートニア<br/>
+        ドレス+タキシード：1着/アクセサリー/小物一式<br/>
+        ※関東以外のエリアに関しては交通費が発生いたします。
       </PriceDetails>
     </div>
   )
 }
 
 export default function Works() {
+  useEffect(() => {
+    const script = document.createElement('script');
+
+    script.src = "https://apps.elfsight.com/p/platform.js";
+    script.async = true;
+
+    document.body.appendChild(script);
+
+    return () => {
+      document.body.removeChild(script);
+    }
+  }, []);
+  
   return (
     <div>
       <Header />
@@ -70,15 +94,20 @@ export default function Works() {
           num="01"
           position="left"
           image={WeddingProduceImg}
-          description="どんな結婚式にしたいか、新郎新婦二人の気持ち、ご家族の気持ちを丁寧にヒアリングしながら会場の選定から当日のディレクションまで行います。"
+          imageSP={WeddingProduceImgSP}
+          description="フリーランスだからこそ実現できる結婚式。屋内ホテルから野外のキャンプ場まで、お二人にあった理想の場所でウエディングをプロデュースします。"
           fee={<Fee />} />
         <Solution
           title="Wedding Produce"
           num="02"
           position="right"
           image={WeddingPhotoImg}
-          description="結婚式の前撮りや後撮りに。全国対応可能。ロケーションフォトを中心にプロデュースしています"
+          imageSP={WeddingPhotoImgSP}
+          description="こだわりの空間や自然豊かな場所で撮影を行うウエディングフォト。結婚式や前撮り、ウエデインングフォトでもご利用いただけます。"
           fee={<WeddingPhotoFee />} />
+        <InstagramSectionWrapper>
+          <div class="elfsight-app-f9a274dc-c5bb-444d-b879-ecac1da0f37d"></div>
+        </InstagramSectionWrapper>
       </ContentsWrapper>
       <ContactButton />
       <Footer />
