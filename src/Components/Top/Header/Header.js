@@ -23,7 +23,7 @@ const HeaderLinksWrapper = styled.div`
       height: 100%;
       width: 100%;
       color: white;
-      background-color: black;
+      background-color: #191817;
     }
     .smartphone-menu-bar {
       display: flex;
@@ -50,7 +50,7 @@ const HeaderLinksWrapper = styled.div`
 `;
 const Link = styled.a`
   text-decoration: none;
-  color: black;
+  color: #191817;
 `;
 const HambergerMenuWrapper = styled.div`
   display: none;

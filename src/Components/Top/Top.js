@@ -26,7 +26,7 @@ const TopImgWrapper = styled.div`
   align-items: center;
 `;
 const LogoImg = styled.img`
-  width: 125px;
+  width: 205px;
   margin: 0 auto;
 `;
 const MessageWrapper = styled.div`
@@ -34,6 +34,7 @@ const MessageWrapper = styled.div`
   max-width: 720px;
   margin: 0 auto 70px;
   padding: 0 36px;
+  font-family: 'ヒラギノ明朝 ProN';
 `;
 const MessageParagraph = styled.div`
   margin: 16px 0;
@@ -73,35 +74,36 @@ export default function Top() {
         <h2 className="title-border-right">Message</h2>
         <MessageWrapper>
           <MessageParagraph>
-            時代は変わった。
+            素敵な時代になった。
           </MessageParagraph>
           <MessageParagraph>
-            決まり切ったシチュエーションやお決まりの流れ。<br />
-            常識やしきたりに惑わされず　自分のこだわりや理想を選択する時代に。
+            周りの目を気にして”同じもの”を選ぶ時代ではなく<br />
+            それぞれが決めた選択やその姿に称賛と拍手を贈る時代。
           </MessageParagraph>
           <MessageParagraph>
-            誰かの幸せの節目となる日に　誰かを「おめでとう。」とお祝いする場に、<br />
-            ”目指すべきスタイル”など存在しないだろう。
+            決まりきったシチュエーションやお決まりの流れ。<br />
+            常識やしきたりに惑わされず、<br />
+            自分のこだわりや理想を選択する時代に。
           </MessageParagraph>
           <MessageParagraph>
-            周りの目を気にして”同じもの”を選ぶ時代ではなく　それぞれが決めた選択やその姿に称賛と拍手を贈る。
-          </MessageParagraph>
-          <MessageParagraph>
-            そんな時間（じかん）のはじまりだ。
+            誰かの幸せな節目となる日に<br />
+            誰かを「おめでとう。」とお祝いする場に<br />
+            "目指すべきスタイル”など存在しないと胸を張って<br />
+            この一瞬を楽しむのだ。
           </MessageParagraph>
         </MessageWrapper>
       </MessageContent>
       <Content
         num="01"
         title="wedding produce"
-        description="会場の選定から当日のディレクションまで。どんな結婚式にしたいか、新郎新婦二人の気持ち、ご家族の気持ちを丁寧にヒアリングしながら一緒に創りましょう。"
+        description="フリーランスだからこそ実現できる結婚式。屋内ホテルから野外のキャンプ場まで、お二人にあった理想の場所でウエディングをプロデュースします。"
         image={Image1}
         position="left"
       />
       <Content
         num="02"
         title="weddimg photo"
-        description="結婚式の前撮りや後撮りに。全国対応可能。ロケーションフォトを中心にプロデュースしています。"
+        description="こだわりの空間や自然豊かな場所で撮影を行うウエディングフォト。結婚式や前撮り、ウエデインングフォトでもご利用いただけます。"
         image={Image2}
         position="right"
       />

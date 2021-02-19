@@ -12,7 +12,7 @@ const Link = styled.a`
   margin: 0 auto;
   max-width: 320px;
   height: 60px;
-  background-color: black;
+  background-color: #191817;
 `;
 
 

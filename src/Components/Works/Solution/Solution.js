@@ -12,11 +12,11 @@ const SolutionWrapper = styled.div`
   } 
 `;
 const SolutionTitleWrapper = styled.h1`
-  background-color: black;
+  background-color: #191817;
   padding: 0 90px;
   color: white;
   position: absolute;
-  top: 25%;
+  top: 8%;
   right: ${props => props.position === "left" ? "0" : "auto"};
   left: ${props => props.position === "right" ? "0" : "auto"};
   max-width: 520px;
@@ -28,7 +28,7 @@ const SolutionTitleWrapper = styled.h1`
   }
 `;
 const DescriptionWrapper = styled.div`
-  margin-top: 270px;
+  margin-top: 120px;
   padding: 16px;
   height: 90px;
   text-align: left;
@@ -62,6 +62,14 @@ const ImageWrapper = styled.div`
 const Image = styled.img`
   width: 100%;
   @media only screen and (max-width: 750px) {
+    /* width: 70%; */
+    display: none;
+  }
+`;
+const ImageSP = styled.img`
+  display: none;
+  @media only screen and (max-width: 750px) {
+    display: initial;
     width: 70%;
   }
 `;
@@ -78,6 +86,7 @@ export default function Solution(props) {
         <ImageWrapper
           position={props.position}>
           <Image src={props.image} alt=""/>
+          <ImageSP src={props.imageSP} alt=""/>
         </ImageWrapper>
         <SolutionDetailedWrapper>
           <SolutionTitleWrapper

@@ -7,7 +7,7 @@ const FooterWrapper = styled.div`
   margin: 72px auto 0;
   padding: 30px;
   line-height: 24px;
-  background-color: black;
+  background-color: #191817;
 `;
 const MenuWrapper = styled.div`
   flex: 0 1 200px;
