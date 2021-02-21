@@ -30,18 +30,24 @@ const LogoImg = styled.img`
   margin: 0 auto;
 `;
 const MessageWrapper = styled.div`
+  line-height: 44px;
+  font-size: 14px;
   text-align: left;
   max-width: 720px;
   margin: 0 auto 70px;
   padding: 0 36px;
   font-family: 'ヒラギノ明朝 ProN';
+  @media only screen and (max-width: 440px) {
+    line-height: 32px;
+    padding: 0 26px;
+  }
 `;
 const MessageParagraph = styled.div`
   margin: 16px 0;
 `;
 const MessageContent = styled.div`
   max-width: 950px;
-  margin: 40px auto 0;
+  margin: 100px auto 0;
   text-align: center;
   .title-border-right {
     display: flex;
@@ -82,12 +88,10 @@ export default function Top() {
           </MessageParagraph>
           <MessageParagraph>
             決まりきったシチュエーションやお決まりの流れ。<br />
-            常識やしきたりに惑わされず、<br />
-            自分のこだわりや理想を選択する時代に。
+            常識やしきたりに惑わされず、自分のこだわりや理想を選択する時代に。
           </MessageParagraph>
           <MessageParagraph>
-            誰かの幸せな節目となる日に<br />
-            誰かを「おめでとう。」とお祝いする場に<br />
+            誰かの幸せな節目となる日に、誰かを「おめでとう。」とお祝いする場に<br />
             "目指すべきスタイル”など存在しないと胸を張って<br />
             この一瞬を楽しむのだ。
           </MessageParagraph>
@@ -99,6 +103,7 @@ export default function Top() {
         description="フリーランスだからこそ実現できる結婚式。屋内ホテルから野外のキャンプ場まで、お二人にあった理想の場所でウエディングをプロデュースします。"
         image={Image1}
         position="left"
+        link="/works/#wedding-produce"
       />
       <Content
         num="02"
@@ -106,6 +111,7 @@ export default function Top() {
         description="こだわりの空間や自然豊かな場所で撮影を行うウエディングフォト。結婚式や前撮り、ウエデインングフォトでもご利用いただけます。"
         image={Image2}
         position="right"
+        link="/works/#wedding-photo"
       />
       <Profile />
       <Contact />

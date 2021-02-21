@@ -11,6 +11,7 @@ const HeaderLink = styled.div`
   }
 `;
 const HeaderLinksWrapper = styled.div`
+  font-family: 'AWConqueror Std Didot';
   display: flex;
   justify-content: center;
   padding: 10px;
@@ -72,7 +73,6 @@ export default function Header() {
   const [smartphoneMenuOpen, setSmartphoneMenuOpen] = useState(false);
 
   const SmartphoneMenu = () => {
-    console.log('hiiiiiiiiiiii');
     
     return (
       <div className="smartphone-menu-wrapper">
@@ -81,13 +81,10 @@ export default function Header() {
         </div>
         <div className="mobile-menu-items-wrapper">
           <UnorderedList>
-            <li><Link className="mobile-menu-link" href="/">Top</Link></li>
-            <li><Link className="mobile-menu-link" href="/works">Works</Link></li>
-            <li><Link className="mobile-menu-link" href="/profile">Profile</Link></li>
-            <li><Link className="mobile-menu-link" href="/fee">Fee</Link></li>
-            <li><Link className="mobile-menu-link" href="/contact">Contact</Link></li>
-            <li onClick={() => setSmartphoneMenuOpen(!smartphoneMenuOpen)}><Link className="mobile-menu-link" href="#online-store">ONLINE STORE</Link></li>
-            <li onClick={() => setSmartphoneMenuOpen(!smartphoneMenuOpen)}><Link className="mobile-menu-link" href="#about">ABOUT</Link></li>
+            <li><Link className="mobile-menu-link" href="/" onClick={() => setSmartphoneMenuOpen(!smartphoneMenuOpen)}>Top</Link></li>
+            <li><Link className="mobile-menu-link" href="/works" onClick={() => setSmartphoneMenuOpen(!smartphoneMenuOpen)}>Works</Link></li>
+            <li><Link className="mobile-menu-link" href="/#profile" onClick={() => setSmartphoneMenuOpen(!smartphoneMenuOpen)}>Profile</Link></li>
+            <li><Link className="mobile-menu-link" href="/#contact" onClick={() => setSmartphoneMenuOpen(!smartphoneMenuOpen)}>Contact</Link></li>
           </UnorderedList>
         </div>
       </div>
@@ -98,9 +95,8 @@ export default function Header() {
       <HeaderLinksWrapper>
         <HeaderLink><Link href="/">Top</Link></HeaderLink>
         <HeaderLink><Link href="/works">Works</Link></HeaderLink>
-        <HeaderLink><Link href="/profile">Profile</Link></HeaderLink>
-        <HeaderLink><Link href="/fee">Fee</Link></HeaderLink>
-        <HeaderLink><Link href="/contact">Contact</Link></HeaderLink>
+        <HeaderLink><Link href="/#profile">Profile</Link></HeaderLink>
+        <HeaderLink><Link href="/#contact">Contact</Link></HeaderLink>
         <HambergerMenuWrapper onClick={() => setSmartphoneMenuOpen(!smartphoneMenuOpen)}>
           {!smartphoneMenuOpen ? <Hamberger className="hamberger" /> : null}
         </HambergerMenuWrapper>

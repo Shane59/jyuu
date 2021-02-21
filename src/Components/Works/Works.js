@@ -10,6 +10,8 @@ import Footer from '../Footer/Footer';
 import Header from '../Top/Header/Header';
 import ContactButton from '../ContactButton/ContactButton';
 
+import WeddingProducePDF from "../../assets/PDFs/produce.pdf";
+import WeddingPhotoPDF from "../../assets/PDFs/photo.pdf";
 
 const ContentsWrapper = styled.div`
   max-width: 1050px;
@@ -91,18 +93,22 @@ export default function Works() {
       <ContentsWrapper>
         <Solution
           title="Wedding Produce"
+          id="wedding-produce"
           num="01"
           position="left"
           image={WeddingProduceImg}
           imageSP={WeddingProduceImgSP}
+          pdf={WeddingProducePDF}
           description="フリーランスだからこそ実現できる結婚式。屋内ホテルから野外のキャンプ場まで、お二人にあった理想の場所でウエディングをプロデュースします。"
           fee={<Fee />} />
         <Solution
-          title="Wedding Produce"
+          title="Wedding Photo"
+          id="wedding-photo"
           num="02"
           position="right"
           image={WeddingPhotoImg}
           imageSP={WeddingPhotoImgSP}
+          pdf={WeddingPhotoPDF}
           description="こだわりの空間や自然豊かな場所で撮影を行うウエディングフォト。結婚式や前撮り、ウエデインングフォトでもご利用いただけます。"
           fee={<WeddingPhotoFee />} />
         <InstagramSectionWrapper>
