@@ -3,7 +3,6 @@ import './App.css';
 import {BrowserRouter as Router, Switch, Route, Link} from 'react-router-dom';
 import Works from './Components/Works/Works';
 import Top from './Components/Top/Top';
-// import PDFViewer from './Components/Works/PDFViewer/PDFViewer';
 import Maintenance from './Components/MaintenancePage/MaintenancePage';
 
 function App() {
