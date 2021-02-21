@@ -4,11 +4,15 @@ import styled from 'styled-components';
 import ProfileImgURL from  "../../../assets/images/profile.jpg";
 
 const TitleWrapper = styled.h1`
-  margin-top: 200px;
+  margin-top: 300px;
+  @media only screen and (max-width: 776px) {
+    margin-top: 200px;
+  }
 `;
 const ProfileWrapper = styled.div`
+  font-size: 14px;
   display: flex;
-  padding: 24px 0;
+  padding: 74px 0;
   margin-bottom: 112px;
   justify-content: center;
   background-color: #1E2A2D;
@@ -56,7 +60,7 @@ const NamePC = styled.h3`
 export default function Profile(props) {
   return (
     <>
-      <TitleWrapper>Profile</TitleWrapper>
+      <TitleWrapper id="profile">Profile</TitleWrapper>
       <ProfileWrapper>
         <ImgWrapper>
           <ProfileImg src={ProfileImgURL} alt=""/>

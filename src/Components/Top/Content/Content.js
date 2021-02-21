@@ -16,12 +16,6 @@ const ContentsWrapper = styled.div`
 const Image = styled.img`
   height: auto;
   max-width: 100%;
-  filter: grayscale(1);
-  :hover {
-    transform: scale(1.1);
-    transition: transform .4s;
-    filter: none;
-  }
 `;
 const TitleAndDesc = styled.div`
   position: absolute;
@@ -32,12 +26,10 @@ const TitleAndDesc = styled.div`
   z-index: 1;
   padding: 40px;
   margin-top: ${props => props.position === "right" ? "210px" : "-80px"};
-  box-shadow: 0px 0px 12px 5px #3b4449;
   margin-left: ${props => props.position === "right" ? "290px" : null};
   @media only screen and (max-width: 776px) {
     position: unset;
     margin: 0 auto;
-    box-shadow: none;
   }
 `;
 const Title = styled.h2`
@@ -65,6 +57,14 @@ const ImgWrapper = styled.div`
     margin: 0px auto;
   }
 `;
+const Link = styled.a`
+  color: white;
+  text-decoration: none;
+`;
+const LinkWrapper = styled.div`
+  margin-top: 10px;
+  text-align: right;
+`;
 
 // props = {
 //   num: String,
@@ -89,6 +89,9 @@ export default function Content(props) {
       >
         <Title>{props.num}. {props.title}</Title>
         <div>{props.description}</div>
+        <LinkWrapper>
+          <Link href={props.link} >more　→</Link>
+        </LinkWrapper>
       </TitleAndDesc>
     </ContentsWrapper>
   )
