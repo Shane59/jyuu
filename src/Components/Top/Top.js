@@ -4,14 +4,14 @@ import styled from 'styled-components';
 import Header from './Header/Header';
 import Content from './Content/Content';
 
-import Image1 from  "../../assets/images/wedding-produce-top.jpg";
-import Image2 from "../../assets/images/wedding-photo.jpg";
+import Image1 from  "../../assets/images/wedding-produce-top.png";
+import Image2 from "../../assets/images/wedding-photo.png";
 import Profile from './Profile/Profile';
-import Contact from '../Contact/Contact';
+import ContactButton from '../ContactButton/ContactButton';
 import Footer from '../Footer/Footer';
 import Logo from '../../assets/Logo-black.png';
 
-import TopImgUrl from '../../assets/images/Top-image.jpg';
+import TopImgUrl from '../../assets/images/Top-image.png';
 
 
 const TopImgWrapper = styled.div`
@@ -24,17 +24,14 @@ const TopImgWrapper = styled.div`
   background-size: cover;
   justify-content: center;
   align-items: center;
-`;
-const LogoImg = styled.img`
-  width: 205px;
-  margin: 0 auto;
+  background-position: center;
 `;
 const MessageWrapper = styled.div`
   line-height: 44px;
   font-size: 14px;
   text-align: left;
   max-width: 720px;
-  margin: 0 auto 70px;
+  margin: 40px auto 70px;
   padding: 0 36px;
   font-family: 'ヒラギノ明朝 ProN';
   @media only screen and (max-width: 440px) {
@@ -72,9 +69,6 @@ export default function Top() {
     <div>
       <Header />
       <TopImgWrapper>
-        <div>
-          <LogoImg src={Logo} alt="Logo" />
-        </div>
       </TopImgWrapper>
       <MessageContent>
         <h2 className="title-border-right">Message</h2>
@@ -100,21 +94,21 @@ export default function Top() {
       <Content
         num="01"
         title="wedding produce"
-        description="フリーランスだからこそ実現できる結婚式。屋内ホテルから野外のキャンプ場まで、お二人にあった理想の場所でウエディングをプロデュースします。"
+        description="常識やしきたりに惑わされず、自分のこだわりや理想を追求する結婚式。屋内ホテルから野外のキャンプ場までお二人にあった理想の場所でウエディングをプロデュースします。"
         image={Image1}
         position="left"
         link="/works/#wedding-produce"
       />
       <Content
         num="02"
-        title="weddimg photo"
+        title="wedding photo"
         description="こだわりの空間や自然豊かな場所で撮影を行うウエディングフォト。結婚式や前撮り、ウエデインングフォトでもご利用いただけます。"
         image={Image2}
         position="right"
         link="/works/#wedding-photo"
       />
       <Profile />
-      <Contact />
+      <ContactButton />
       <Footer />
     </div>
   )

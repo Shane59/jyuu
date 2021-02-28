@@ -10,6 +10,11 @@ const ContentsWrapper = styled.div`
   @media only screen and (max-width: 776px) {
     position: unset;
     height: 350px;
+    margin: 64px auto 265px;
+  }
+  @media only screen and (max-width: 440px) {
+    position: unset;
+    height: 350px;
     margin: 64px auto 205px;
   }
 `;
@@ -19,14 +24,14 @@ const Image = styled.img`
 `;
 const TitleAndDesc = styled.div`
   position: absolute;
-  background-color: #191817;
+  background-color: #212222;
   color: white;
   max-width: 400px;
   text-align: left;
   z-index: 1;
   padding: 40px;
   margin-top: ${props => props.position === "right" ? "210px" : "-80px"};
-  margin-left: ${props => props.position === "right" ? "290px" : null};
+  margin-left: ${props => props.position === "right" ? "270px" : null};
   @media only screen and (max-width: 776px) {
     position: unset;
     margin: 0 auto;
