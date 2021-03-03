@@ -10,7 +10,7 @@ const FooterWrapper = styled.div`
   margin: 72px auto 0;
   padding: 30px;
   line-height: 24px;
-  background-color: #191817;
+  background-color: #212222;
 `;
 const MenuWrapper = styled.div`
   flex: 0 1 200px;
@@ -35,7 +35,7 @@ export default function Footer() {
         <div><Link href="/">Top</Link></div>
         <div><Link href="/works">Works</Link></div>
         <div><Link href="/#profile">Profile</Link></div>
-        <div><Link href="/#contact">Contact</Link></div>
+        <div><Link href="https://docs.google.com/forms/d/e/1FAIpQLSfKZH4FKgWFznDUQtjF4mQyCQN4vDjayYbYng8tQe3WyvvW9w/viewform?embedded=true">Contact</Link></div>
       </MenuWrapper>
       <LinkIconsWrapper>
         <div><Link href="https://line.me/R/ti/p/499rihcl" target="blank"><img className="icon" src={LineIcon} alt=""/></Link></div>

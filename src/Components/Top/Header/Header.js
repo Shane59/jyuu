@@ -14,7 +14,7 @@ const HeaderLinksWrapper = styled.div`
   font-family: 'AWConqueror Std Didot';
   display: flex;
   justify-content: center;
-  padding: 10px;
+  padding: 15px;
   height: 100%; //check this later
   @media only screen and (max-width: 430px) {
     .smartphone-menu-wrapper {
@@ -84,7 +84,7 @@ export default function Header() {
             <li><Link className="mobile-menu-link" href="/" onClick={() => setSmartphoneMenuOpen(!smartphoneMenuOpen)}>Top</Link></li>
             <li><Link className="mobile-menu-link" href="/works" onClick={() => setSmartphoneMenuOpen(!smartphoneMenuOpen)}>Works</Link></li>
             <li><Link className="mobile-menu-link" href="/#profile" onClick={() => setSmartphoneMenuOpen(!smartphoneMenuOpen)}>Profile</Link></li>
-            <li><Link className="mobile-menu-link" href="/#contact" onClick={() => setSmartphoneMenuOpen(!smartphoneMenuOpen)}>Contact</Link></li>
+            <li><Link className="mobile-menu-link" href="https://docs.google.com/forms/d/e/1FAIpQLSfKZH4FKgWFznDUQtjF4mQyCQN4vDjayYbYng8tQe3WyvvW9w/viewform?embedded=true" onClick={() => setSmartphoneMenuOpen(!smartphoneMenuOpen)}>Contact</Link></li>
           </UnorderedList>
         </div>
       </div>
@@ -96,7 +96,7 @@ export default function Header() {
         <HeaderLink><Link href="/">Top</Link></HeaderLink>
         <HeaderLink><Link href="/works">Works</Link></HeaderLink>
         <HeaderLink><Link href="/#profile">Profile</Link></HeaderLink>
-        <HeaderLink><Link href="/#contact">Contact</Link></HeaderLink>
+        <HeaderLink><Link href="https://docs.google.com/forms/d/e/1FAIpQLSfKZH4FKgWFznDUQtjF4mQyCQN4vDjayYbYng8tQe3WyvvW9w/viewform?embedded=true">Contact</Link></HeaderLink>
         <HambergerMenuWrapper onClick={() => setSmartphoneMenuOpen(!smartphoneMenuOpen)}>
           {!smartphoneMenuOpen ? <Hamberger className="hamberger" /> : null}
         </HambergerMenuWrapper>

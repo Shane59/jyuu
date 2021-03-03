@@ -15,7 +15,7 @@ const SolutionWrapper = styled.div`
   } 
 `;
 const SolutionTitleWrapper = styled.h1`
-  background-color: #191817;
+  background-color: #212222;
   padding: 0 90px;
   color: white;
   position: absolute;

@@ -15,7 +15,7 @@ const ProfileWrapper = styled.div`
   padding: 74px 0;
   margin-bottom: 112px;
   justify-content: center;
-  background-color: #1E2A2D;
+  background-color: #212222;
   color: white;
   align-items: center;
   @media only screen and (max-width: 776px) {
@@ -33,7 +33,10 @@ const ImgWrapper = styled.div`
 const ProfileDescriptionWrapper = styled.div`
   flex: 0 1 410px;
   @media only screen and (max-width: 776px) {
-    padding: 16px;
+    padding: 12px;
+    .sp-hide {
+      display:none;
+    }
   }
 `;
 const Name = styled.h3`
@@ -74,8 +77,8 @@ export default function Profile(props) {
             2020年、フリーランスウエディングプランナーとして独立。<br/>
             <br/>
             会場選びから当日のディレクションまで。<br/>
-            自分ができるウエディングに必要な要素を一から具現化し、<br/>
-            ”結婚式に「目指すべきスタイル」は存在しない”をコンセプトに<br/>
+            自分ができるウエディングに必要な要素を一から具現化し、<br className="sp-hide" />
+            ”結婚式に「目指すべきスタイル」は存在しない”をコンセプトに<br className="sp-hide"/>
             自由でユニークな結婚式を創ります。
           </p>
         </ProfileDescriptionWrapper>

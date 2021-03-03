@@ -26,7 +26,7 @@ const Message = styled.div`
   max-width: 950px;
   height: 550px;
   margin: 0 auto;
-  background-color: #191817;
+  background-color: #212222;
   color: white;
   font-size: 72px;
   font-family: 'AWConqueror Std Didot';
@@ -35,9 +35,10 @@ const Message = styled.div`
   }
 `;
 const PriceDetails = styled.p`
-  @media only screen and (max-width: 440px) {
+  font-size: 12px;
+  /* @media only screen and (max-width: 440px) {
     font-size: 12px;
-  }
+  } */
 `;
 
 const InstagramSectionWrapper = styled.div`
@@ -59,13 +60,10 @@ function WeddingPhotoFee() {
   return (
     <div>
       <div>
-        <li>【ロケーションフォト撮影(国内)】</li>
-        <li>スタジオフォト：¥230,000yen〜(税別)</li>
+        <li>ロケーションフォト(国内)：¥125,000yen〜(税別)</li>
+        <li>スタジオフォト：¥140,000yen〜(税別)</li>
       </div>
-      <div>基本プラン：¥190,000 yen〜(税抜)</div>
-      <PriceDetails>[セット内容]<br />
-        撮影場所/ヘアメイク/写真データ：100〜200カット/ブーケブートニア<br/>
-        ドレス+タキシード：1着/アクセサリー/小物一式<br/>
+      <PriceDetails>
         ※関東以外のエリアに関しては交通費が発生いたします。
       </PriceDetails>
     </div>
@@ -99,7 +97,7 @@ export default function Works() {
           image={WeddingProduceImg}
           imageSP={WeddingProduceImgSP}
           pdf={WeddingProducePDF}
-          description="フリーランスだからこそ実現できる結婚式。屋内ホテルから野外のキャンプ場まで、お二人にあった理想の場所でウエディングをプロデュースします。"
+          description="フリーランスだからこそ叶えられる、極限まで低コストを目指した結婚式。挙式のスタイルや料理の形式まで全ての要素に制限をかけず、お二人にあった”理想のスタイル”を一緒に考えます。"
           fee={<Fee />} />
         <Solution
           title="Wedding Photo"
@@ -109,7 +107,7 @@ export default function Works() {
           image={WeddingPhotoImg}
           imageSP={WeddingPhotoImgSP}
           pdf={WeddingPhotoPDF}
-          description="こだわりの空間や自然豊かな場所で撮影を行うウエディングフォト。結婚式や前撮り、ウエデインングフォトでもご利用いただけます。"
+          description="お二人のこだわりや希望をお伺いし、空間からスタイリング。誰とも被らないオリジナルフォトをお撮りいたします。"
           fee={<WeddingPhotoFee />} />
         <InstagramSectionWrapper>
           <div class="elfsight-app-f9a274dc-c5bb-444d-b879-ecac1da0f37d"></div>
