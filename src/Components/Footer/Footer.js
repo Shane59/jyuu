@@ -38,7 +38,7 @@ export default function Footer() {
         <div><Link href="https://docs.google.com/forms/d/e/1FAIpQLSfKZH4FKgWFznDUQtjF4mQyCQN4vDjayYbYng8tQe3WyvvW9w/viewform?embedded=true">Contact</Link></div>
       </MenuWrapper>
       <LinkIconsWrapper>
-        <div><Link href="https://line.me/R/ti/p/499rihcl" target="blank"><img className="icon" src={LineIcon} alt=""/></Link></div>
+        <div><Link href="https://line.me/R/ti/p/@499rihcl" target="blank"><img className="icon" src={LineIcon} alt=""/></Link></div>
       </LinkIconsWrapper>
     </FooterWrapper>
   )
