@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Link = styled.a`
+  font-family: 'AWConqueror Std Didot';
   text-decoration: none;
   color: white;
   display: flex;
@@ -12,7 +13,7 @@ const Link = styled.a`
   margin: 0 auto;
   max-width: 320px;
   height: 60px;
-  background-color: black;
+  background-color: #212222;
 `;
 
 

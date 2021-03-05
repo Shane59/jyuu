@@ -3,12 +3,15 @@ import styled from 'styled-components';
 
 import ProfileImgURL from  "../../../assets/images/profile.jpg";
 
+const TitleWrapper = styled.h1`
+`;
 const ProfileWrapper = styled.div`
+  font-size: 14px;
   display: flex;
-  padding-bottom: 24px;
+  padding: 74px 0;
   margin-bottom: 112px;
   justify-content: center;
-  background-color: #1E2A2D;
+  background-color: #212222;
   color: white;
   align-items: center;
   @media only screen and (max-width: 776px) {
@@ -16,6 +19,7 @@ const ProfileWrapper = styled.div`
   }
 `;
 const ImgWrapper = styled.div`
+  position: relative;
   flex: 0 1 410px;
   @media only screen and (max-width: 776px) {
     flex: 0 1 150px;
@@ -23,34 +27,55 @@ const ImgWrapper = styled.div`
   }
 `;
 const ProfileDescriptionWrapper = styled.div`
-  text-align: left;
   flex: 0 1 410px;
   @media only screen and (max-width: 776px) {
-    padding: 16px;
+    padding: 12px;
+    .sp-hide {
+      display:none;
+    }
   }
 `;
 const Name = styled.h3`
-  font-size: 32px;
-  font-family: cursive;
+  display: none;
+  @media only screen and (max-width: 776px) {
+    display: block;
+    font-size: 32px;
+  }
 `;
 const ProfileImg = styled.img`
   height: 180px;
   width: auto;
 `;
+const NamePC = styled.h3`
+  position: absolute;
+  font-size: 32px;
+  top: 108px;
+  right: 46px;
+  @media only screen and (max-width: 776px) {
+    display: none;
+  }
+`;
 
 export default function Profile(props) {
   return (
     <>
-      <h1>Profile</h1>
+      <TitleWrapper id="profile">Profile</TitleWrapper>
       <ProfileWrapper>
         <ImgWrapper>
           <ProfileImg src={ProfileImgURL} alt=""/>
+          <NamePC>Minami<br />Takenaka</NamePC>
         </ImgWrapper>
         <ProfileDescriptionWrapper>
           <Name>Minami Takenaka</Name>
           <h4>兵庫県出身</h4>
-          <p>大学卒業後、新卒でイベント会社へ就職。ウエディング事業部にて現場と企画の経験を積み2020年、フリーランスウエディングプランナーとして独立。<br/>
-            <br/>会場選びから当日でディレクションまでの全てを監修。ウエディングに必要な要素を一から具現化し、”結婚式に「目指すべきスタイル」は存在しない”をコンセプトに自由でユニークな結婚式を創ります。
+          <p>大学卒業後、東京へ上京し新卒でイベント会社へ就職。<br/>
+            ウエディング事業部にて現場と企画の経験を積み<br/>
+            2020年、フリーランスウエディングプランナーとして独立。<br/>
+            <br/>
+            会場選びから当日のディレクションまで。<br/>
+            自分ができるウエディングに必要な要素を一から具現化し、<br className="sp-hide" />
+            ”結婚式に「目指すべきスタイル」は存在しない”をコンセプトに<br className="sp-hide"/>
+            自由でユニークな結婚式を創ります。
           </p>
         </ProfileDescriptionWrapper>
       </ProfileWrapper>
