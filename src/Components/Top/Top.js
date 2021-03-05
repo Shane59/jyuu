@@ -12,6 +12,7 @@ import Footer from '../Footer/Footer';
 import Logo from '../../assets/Logo-black.png';
 
 import TopImgUrl from '../../assets/images/Top-image.png';
+import TopImgUrlSP from '../../assets/images/Top-image-sp.png';
 
 
 const TopImgWrapper = styled.div`
@@ -25,6 +26,12 @@ const TopImgWrapper = styled.div`
   justify-content: center;
   align-items: center;
   background-position: center;
+  @media only screen and (max-width: 440px) {
+    background-image: url(${TopImgUrlSP});
+  }
+  @media only screen and (min-width: 441px) {
+    background-image: url(${TopImgUrl});
+  }
 `;
 const MessageWrapper = styled.div`
   line-height: 44px;
