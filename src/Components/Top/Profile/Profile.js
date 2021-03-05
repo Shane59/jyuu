@@ -4,10 +4,6 @@ import styled from 'styled-components';
 import ProfileImgURL from  "../../../assets/images/profile.jpg";
 
 const TitleWrapper = styled.h1`
-  margin-top: 300px;
-  @media only screen and (max-width: 776px) {
-    margin-top: 200px;
-  }
 `;
 const ProfileWrapper = styled.div`
   font-size: 14px;

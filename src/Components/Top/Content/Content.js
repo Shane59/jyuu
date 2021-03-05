@@ -3,9 +3,9 @@ import styled from 'styled-components';
 
 const ContentsWrapper = styled.div`
   position: relative;
-  margin: 144px auto 136px;
-  max-width: 710px;
-  height: 260px;
+  margin: 0 auto;
+  max-width: 790px;
+  height: 600px;
   font-family: 'ヒラギノ明朝 ProN';
   @media only screen and (max-width: 776px) {
     position: unset;
@@ -30,8 +30,8 @@ const TitleAndDesc = styled.div`
   text-align: left;
   z-index: 1;
   padding: 40px;
-  margin-top: ${props => props.position === "right" ? "210px" : "-80px"};
-  margin-left: ${props => props.position === "right" ? "270px" : null};
+  right: ${props => props.position === "right" ? "0" : null};
+  top: ${props => props.position === "right" ? "190px" : null};
   @media only screen and (max-width: 776px) {
     position: unset;
     margin: 0 auto;
@@ -55,7 +55,8 @@ const ImgWrapper = styled.div`
   position: absolute;
   max-width: 100%;
   width: 480px;
-  margin-left: ${props => props.position === "left" ? "360px" : null};
+  right: ${props => props.position === "left" ? "0" : null};
+  top: ${props => props.position === "left" ? "130px" : null};
   z-index: 0;
   @media only screen and (max-width: 776px) {
     position: unset;
