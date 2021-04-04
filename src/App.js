@@ -20,7 +20,6 @@ history.listen(location => {
   ReactGA.pageview(location.pathname); // Record a pageview for the given page
 });
 
-
 function App() {
   return (
     <Router history={history}>
