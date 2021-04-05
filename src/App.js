@@ -13,17 +13,19 @@ import { initGA, GApageView } from './index';
 
 // ReactGA.initialize(TRACKING_ID);
 
-const history = createBrowserHistory();
+// const history = createBrowserHistory();
 
 // Initialize google analytics page view tracking
-history.listen(location => {
-  ReactGA.set({ page: location.pathname });
-  ReactGA.pageview('/');
-});
+// history.listen(location => {
+//   console.log('page history');
+  
+//   ReactGA.set({ page: location.pathname });
+//   ReactGA.pageview('/');
+// });
 
 function App() {
-  useEffect(() => { initGA(); }, []);
-  useEffect(() => { GApageView("landing"); }, []);
+  // useEffect(() => { initGA(); }, []);
+  // useEffect(() => { GApageView("landing"); }, []);
   return (
     <Router history={history}>
       <div className="App">
