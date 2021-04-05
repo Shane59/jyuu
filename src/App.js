@@ -8,7 +8,7 @@ import Top from './Components/Top/Top';
 import ReactGA from 'react-ga';
 import { createBrowserHistory } from 'history';
 
-const TRACKING_ID = "UA-193131236";
+const TRACKING_ID = "G-Y4W59DCDL1";
 
 ReactGA.initialize(TRACKING_ID);
 
