@@ -3,6 +3,15 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import ReactGA from 'react-ga';
+
+export const initGA = () => {       
+    ReactGA.initialize('G-Y4W59DCDL1');
+}
+
+export const GApageView = (page) => {   
+  ReactGA.pageview(page);   
+}
 
 ReactDOM.render(
   <React.StrictMode>
