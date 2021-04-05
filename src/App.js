@@ -27,7 +27,7 @@ function App() {
   // useEffect(() => { initGA(); }, []);
   // useEffect(() => { GApageView("landing"); }, []);
   return (
-    <Router history={history}>
+    <Router>
       <div className="App">
         <Switch>
           {/* <Route exact path='*' component={Maintenance} /> */}
