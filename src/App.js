@@ -6,15 +6,7 @@ import { BrowserRouter as Router, Switch, Route, Link} from 'react-router-dom';
 import Works from './Components/Works/Works';
 import Top from './Components/Top/Top';
 
-import ReactGA from 'react-ga';
-
 function App() {
-  useEffect(() => {
-    ReactGA.initialize('UA-266981483');
-
-    // to report page view
-    ReactGA.pageview('/');
-  });
   
   return (
     <Router>
