@@ -24,10 +24,14 @@ const NewsDate = styled.div`
   color: gray;
   margin: 5px 0;
 `;
+const NewsBody = styled.div`
+  font-family: 'ヒラギノ明朝 ProN';
+  font-size: 13px;
+`;
 
 export default function NewsList(props) {
-  console.log('getting news data');
-  console.log(props.data);
+  // console.log('getting news data');
+  // console.log(props.data);
 
   const displayNewsList = () => {
     return (
@@ -39,7 +43,7 @@ export default function NewsList(props) {
           return(
             <NewsListItem key={index}>
               <NewsDate>{getPublicationDate(el.last_publication_date)}</NewsDate>
-              {el.data.body[0].text}
+              <NewsBody>{el.data.body[0].text}</NewsBody>
             </NewsListItem>
           )
         })}
