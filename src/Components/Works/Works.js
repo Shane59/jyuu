@@ -60,8 +60,8 @@ function WeddingPhotoFee() {
   return (
     <div>
       <div>
-        <li>ロケーションフォト(国内)：¥125,000yen〜(税別)</li>
-        <li>スタジオフォト：¥140,000yen〜(税別)</li>
+        <li>ロケーションフォト(国内)：¥145,000yen〜(税別)</li>
+        <li>スタジオフォト：¥125,000yen〜(税別)</li>
       </div>
       <PriceDetails>
         ※関東以外のエリアに関しては交通費が発生いたします。
