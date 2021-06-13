@@ -5,7 +5,7 @@ import Solution from './Solution/Solution';
 import WeddingProduceImg from  "../../assets/images/wedding-produce.jpg";
 import WeddingProduceImgSP from  "../../assets/images/wedding-produce-sp.jpg";
 import WeddingPhotoImg from  "../../assets/images/wedding-photo-works.jpg";
-import WeddingPhotoImgSP from  "../../assets/images/wedding-photo-works-sp.jpg";
+import WeddingPhotoImgSP from  "../../assets/images/wedding-photo-works-sp.png";
 import Footer from '../Footer/Footer';
 import Header from '../Top/Header/Header';
 import ContactButton from '../ContactButton/ContactButton';
@@ -60,8 +60,8 @@ function WeddingPhotoFee() {
   return (
     <div>
       <div>
-        <li>ロケーションフォト(国内)：¥125,000yen〜(税別)</li>
-        <li>スタジオフォト：¥140,000yen〜(税別)</li>
+        <li>ロケーションフォト(国内)：¥145,000yen〜(税別)</li>
+        <li>スタジオフォト：¥125,000yen〜(税別)</li>
       </div>
       <PriceDetails>
         ※関東以外のエリアに関しては交通費が発生いたします。

@@ -5,7 +5,7 @@ import Header from './Header/Header';
 import Content from './Content/Content';
 
 import Image1 from  "../../assets/images/wedding-produce-top.png";
-import Image2 from "../../assets/images/wedding-photo.png";
+import Image2 from "../../assets/images/wedding-photo.jpg";
 import Profile from './Profile/Profile';
 import ContactButton from '../ContactButton/ContactButton';
 import Footer from '../Footer/Footer';
