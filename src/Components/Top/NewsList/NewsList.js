@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import {Link, RichText, Date} from 'prismic-reactjs';
 
 const getPublicationDate = (date) => {
   const year = date.substring(0, 4);
@@ -14,6 +15,9 @@ const NewsListWrapper = styled.div`
   max-width: 720px;
   margin: 40px auto 0px;
   padding: 0 36px;
+  @media only screen and (max-width: 440px) {
+    padding: 0 26px;
+  }
 `;
 const NewsListItem = styled.div`
   font-size: 14px;
@@ -42,8 +46,8 @@ export default function NewsList(props) {
           
           return(
             <NewsListItem key={index}>
-              <NewsDate>{getPublicationDate(el.last_publication_date)}</NewsDate>
-              <NewsBody>{el.data.body[0].text}</NewsBody>
+              <NewsDate>{getPublicationDate(el.first_publication_date)}</NewsDate>
+              <NewsBody><RichText props={el.data.body} /></NewsBody>
             </NewsListItem>
           )
         })}

@@ -80,7 +80,6 @@ export default function Top() {
     fetch('https://minamitakenaka.cdn.prismic.io/api/v2')
       .then(res => res.json())
       .then((data) => {
-        console.log(data.refs[0].ref);
         getNewsData(data.refs[0].ref);
       })
       .catch(console.log)
@@ -90,10 +89,12 @@ export default function Top() {
     fetch(`https://minamitakenaka.cdn.prismic.io/api/v2/documents/search?ref=${ref}`)
     .then(res => res.json())
     .then((data) => {
-      console.log('calling API');
-      console.log(data.results);
-      
-      setNewsList(data.results)
+      data.results.sort((a, b) => {
+        var dateA = new Date(a.first_publication_date).getMilliseconds();
+        var dateB = new Date(b.first_publication_date).getMilliseconds();
+        return dateB - dateA;
+      });
+      setNewsList(data.results);
       setNewsListLoaded(true);
     })
     .catch(console.log)
