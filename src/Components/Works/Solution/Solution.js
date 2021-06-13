@@ -24,7 +24,7 @@ const SolutionTitleWrapper = styled.h1`
   max-width: 520px;
   @media only screen and (max-width: 750px) {
     padding: 0 40px;
-    top: 8%;
+    top: 1%;
   }
   @media only screen and (max-width: 440px) {
     font-size: 24px;
