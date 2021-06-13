@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import ProfileImgURL from  "../../../assets/images/profile.jpg";
+import ProfileImgURL from  "../../../assets/images/profile.png";
 
 const TitleWrapper = styled.h1`
 `;
