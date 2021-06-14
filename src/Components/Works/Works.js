@@ -5,7 +5,7 @@ import Solution from './Solution/Solution';
 import WeddingProduceImg from  "../../assets/images/wedding-produce.jpg";
 import WeddingProduceImgSP from  "../../assets/images/wedding-produce-sp.jpg";
 import WeddingPhotoImg from  "../../assets/images/wedding-photo-works.jpg";
-import WeddingPhotoImgSP from  "../../assets/images/wedding-photo-works-sp.jpg";
+import WeddingPhotoImgSP from  "../../assets/images/wedding-photo-works-sp.png";
 import Footer from '../Footer/Footer';
 import Header from '../Top/Header/Header';
 import ContactButton from '../ContactButton/ContactButton';
