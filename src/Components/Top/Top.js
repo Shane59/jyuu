@@ -90,8 +90,8 @@ export default function Top() {
     .then(res => res.json())
     .then((data) => {
       data.results.sort((a, b) => {
-        var dateA = new Date(a.first_publication_date).getMilliseconds();
-        var dateB = new Date(b.first_publication_date).getMilliseconds();
+        var dateA = new Date(a.first_publication_date).getTime();
+        var dateB = new Date(b.first_publication_date).getTime();
         return dateB - dateA;
       });
       setNewsList(data.results);

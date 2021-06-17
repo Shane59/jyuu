@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-import {Link, RichText, Date} from 'prismic-reactjs';
+// import {Link, RichText, Date} from 'prismic-reactjs';
+import RichTextComponent from '../../RichTextComponent';
 
 const getPublicationDate = (date) => {
   const year = date.substring(0, 4);
@@ -42,12 +43,11 @@ export default function NewsList(props) {
       <div>
         <h2>News Release</h2>
         {props.data.map((el, index) => {
-          console.log(el.data.body[0].text);
           
           return(
             <NewsListItem key={index}>
               <NewsDate>{getPublicationDate(el.first_publication_date)}</NewsDate>
-              <NewsBody><RichText props={el.data.body} /></NewsBody>
+              <NewsBody><RichTextComponent text={el.data.body} /></NewsBody>
             </NewsListItem>
           )
         })}
