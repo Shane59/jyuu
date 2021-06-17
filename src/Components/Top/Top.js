@@ -139,7 +139,7 @@ export default function Top() {
         <Content
           num="02"
           title="wedding photo"
-          description="こだわりの空間や自然豊かな場所で撮影を行うウエディングフォト。結婚式や前撮り、ウエデインングフォトでもご利用いただけます。"
+          description="こだわりの空間や自然豊かな場所で撮影を行うウエディングフォト。結婚式や前撮り、ウエディングフォトでもご利用いただけます。"
           image={Image2}
           position="right"
           link="/works/#wedding-photo"
