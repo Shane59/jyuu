@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import styled from 'styled-components';
 // import {Link, RichText, Date} from 'prismic-reactjs';
 import RichTextComponent from '../../RichTextComponent';
@@ -33,31 +33,52 @@ const NewsBody = styled.div`
   font-family: 'ヒラギノ明朝 ProN';
   font-size: 13px;
 `;
+const ShowHideBtn = styled.p`
+  cursor: pointer;
+`;
 
 export default function NewsList(props) {
-  // console.log('getting news data');
-  // console.log(props.data);
-
+  const [showMore, setshowMore] = useState(false);
+  const overflownNews = [];
+  const newsList = [];
+  const newsNum = 3;
   const displayNewsList = () => {
-    return (
-      <div>
-        <h2>News Release</h2>
-        {props.data.map((el, index) => {
-          
-          return(
-            <NewsListItem key={index}>
-              <NewsDate>{getPublicationDate(el.first_publication_date)}</NewsDate>
-              <NewsBody><RichTextComponent text={el.data.body} /></NewsBody>
-            </NewsListItem>
-          )
-        })}
-      </div>
-    )
+    {props.data.map((el, index) => {          
+      if (index > newsNum - 1) {
+        overflownNews.push(
+          <NewsListItem key={index}>
+            <NewsDate>{getPublicationDate(el.first_publication_date)}</NewsDate>
+            <NewsBody><RichTextComponent text={el.data.body} /></NewsBody>
+          </NewsListItem>
+        );
+      } else {
+        newsList.push(
+          <NewsListItem key={index}>
+            <NewsDate>{getPublicationDate(el.first_publication_date)}</NewsDate>
+            <NewsBody><RichTextComponent text={el.data.body} /></NewsBody>
+          </NewsListItem>
+        )
+      }
+      
+    })}
   }
   
   return(
     <NewsListWrapper>
+      <h2>News Release</h2>
       {displayNewsList()}
+      {newsList}
+      {props.data.length > newsNum && !showMore ?
+        <ShowHideBtn onClick={() => setshowMore(true)}>show more</ShowHideBtn>
+      : null
+      }
+      {props.data.length > newsNum && showMore ?
+        <>
+          <div>{overflownNews}</div>
+          <ShowHideBtn onClick={() => setshowMore(false)}>close</ShowHideBtn>
+        </>
+       : null
+      }
     </NewsListWrapper>
   )
 }
