@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import LazyLoad from "react-lazyload";
 
 const ContentsWrapper = styled.div`
   position: relative;
@@ -72,15 +73,6 @@ const LinkWrapper = styled.div`
   text-align: right;
 `;
 
-// props = {
-//   num: String,
-//   title: String,
-//   descrption: String,
-//   image: String,
-//   url: String,
-//   position: String
-// }
-
 export default function Content(props) {
   return (
     <ContentsWrapper>
@@ -88,7 +80,9 @@ export default function Content(props) {
       <ImgWrapper
         position={props.position}
       >
-        <Image src={props.image} alt="photo"/>
+        <LazyLoad>
+          <Image src={props.image} alt="photo"/>
+        </LazyLoad>
       </ImgWrapper>
       <TitleAndDesc
         position={props.position}

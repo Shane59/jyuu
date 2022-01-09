@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import LazyLoad from "react-lazyload";
 
 // import { Document, Page, pdfjs } from 'react-pdf';
 // pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
@@ -98,8 +99,12 @@ export default function Solution(props) {
       >
         <ImageWrapper
           position={props.position}>
-          <Image src={props.image} alt=""/>
-          <ImageSP src={props.imageSP} alt=""/>
+          <LazyLoad>
+            <Image src={props.image} alt=""/>
+          </LazyLoad>
+          <LazyLoad>
+            <ImageSP src={props.imageSP} alt=""/>
+          </LazyLoad>
         </ImageWrapper>
         <SolutionDetailedWrapper>
           <SolutionTitleWrapper
