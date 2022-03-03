@@ -1,3 +1,10 @@
+This is my personal project to support my friend's wedding business.<br>
+This is running on Firbase, and I implemented CI/CD with GitHub actions.
+
+Please visit the link below for the current production environment.
+
+https://minamitakenaka.com/
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
