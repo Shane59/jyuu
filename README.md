@@ -3,7 +3,7 @@ This is running on Firbase, and I implemented CI/CD with GitHub actions.
 
 Please visit the link below for the current production environment.
 
-https://minamitakenaka.com/
+https://minami-takenaka-wedding.web.app/
 
 # Getting Started with Create React App
 
